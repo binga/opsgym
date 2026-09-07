@@ -2,6 +2,9 @@
 
 OpsGym is an open benchmark for agents that operate across realistic workplace systems. It turns patterns from real local AI-agent conversations into sanitized, reusable task environments with executable state-based graders.
 
+**Website:** https://binga.github.io/opsgym/  
+**Repository:** https://github.com/binga/opsgym
+
 The repository includes:
 
 - 16 executable tasks across two simulator families

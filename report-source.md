@@ -24,7 +24,7 @@ The MVP uses deterministic in-memory state rather than cloning production servic
 
 ## Limitations
 
-The local-history sample is selected and small. The reconstructed fixtures preserve workflow structure but do not claim exact environment recovery. Synthetic leaderboard values are UI fixtures. No real model comparison is supported yet. GitHub publication and website deployment require authenticated external accounts.
+The local-history sample is selected and small. The reconstructed fixtures preserve workflow structure but do not claim exact environment recovery. Synthetic leaderboard values are UI fixtures. No real model comparison is supported yet.
 
 ## Recommendations
 
