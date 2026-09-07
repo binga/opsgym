@@ -123,10 +123,14 @@ class ConversationEnv:
         terminated = tool == "finish"
         truncated = self.step_count >= self.task.max_steps and not terminated
         info: dict[str, Any] = {}
+        reward = -.02 if "error" not in result else -.1
         if terminated or truncated:
             self.done = True
-            info["grade"] = self._grade()
-        return self._observation(result), -.02 if "error" not in result else -.1, terminated, truncated, info
+            grade = self._grade()
+            terminal_reward = grade["outcome"] + .30 * grade["compliance"] + .20 * grade["communication"] + .15 * grade["evidence"]
+            reward += terminal_reward
+            info.update(grade=grade, terminal_reward=terminal_reward)
+        return self._observation(result), reward, terminated, truncated, info
 
     def _observation(self, result: Any) -> dict[str, Any]:
         return {"goal": self.task.goal, "last_result": result, "steps_remaining": self.task.max_steps - self.step_count, "available_tools": ["store.get", "store.search", "store.update", "store.delete", "publish.deploy", "finish"]}
