@@ -1,0 +1,962 @@
+[
+  {
+    "id": "revenue-ops-territory-reassignment",
+    "domain": "revenue-ops",
+    "title": "Territory Reassignment",
+    "workspace": "CRM, contracts, billing, email",
+    "tools": [
+      "crm",
+      "billing",
+      "email"
+    ],
+    "mode": "single-workspace",
+    "difficulty": "medium",
+    "observable_goal": "Resolve the territory reassignment case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "revenue-ops-renewal-rescue",
+    "domain": "revenue-ops",
+    "title": "Renewal Rescue",
+    "workspace": "CRM, contracts, billing, email",
+    "tools": [
+      "crm",
+      "billing",
+      "email"
+    ],
+    "mode": "cross-workspace",
+    "difficulty": "hard",
+    "observable_goal": "Resolve the renewal rescue case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "revenue-ops-quote-reconciliation",
+    "domain": "revenue-ops",
+    "title": "Quote Reconciliation",
+    "workspace": "CRM, contracts, billing, email",
+    "tools": [
+      "crm",
+      "billing",
+      "email"
+    ],
+    "mode": "multi-round",
+    "difficulty": "frontier",
+    "observable_goal": "Resolve the quote reconciliation case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "revenue-ops-discount-approval",
+    "domain": "revenue-ops",
+    "title": "Discount Approval",
+    "workspace": "CRM, contracts, billing, email",
+    "tools": [
+      "crm",
+      "billing",
+      "email"
+    ],
+    "mode": "single-workspace",
+    "difficulty": "medium",
+    "observable_goal": "Resolve the discount approval case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "revenue-ops-duplicate-account-merge",
+    "domain": "revenue-ops",
+    "title": "Duplicate-Account Merge",
+    "workspace": "CRM, contracts, billing, email",
+    "tools": [
+      "crm",
+      "billing",
+      "email"
+    ],
+    "mode": "cross-workspace",
+    "difficulty": "hard",
+    "observable_goal": "Resolve the duplicate-account merge case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "customer-support-outage-triage",
+    "domain": "customer-support",
+    "title": "Outage Triage",
+    "workspace": "tickets, SLA policy, status page, knowledge base",
+    "tools": [
+      "support",
+      "status",
+      "kb"
+    ],
+    "mode": "cross-workspace",
+    "difficulty": "frontier",
+    "observable_goal": "Resolve the outage triage case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "customer-support-escalation-routing",
+    "domain": "customer-support",
+    "title": "Escalation Routing",
+    "workspace": "tickets, SLA policy, status page, knowledge base",
+    "tools": [
+      "support",
+      "status",
+      "kb"
+    ],
+    "mode": "multi-round",
+    "difficulty": "medium",
+    "observable_goal": "Resolve the escalation routing case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "customer-support-entitlement-check",
+    "domain": "customer-support",
+    "title": "Entitlement Check",
+    "workspace": "tickets, SLA policy, status page, knowledge base",
+    "tools": [
+      "support",
+      "status",
+      "kb"
+    ],
+    "mode": "single-workspace",
+    "difficulty": "hard",
+    "observable_goal": "Resolve the entitlement check case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "customer-support-root-cause-clustering",
+    "domain": "customer-support",
+    "title": "Root-Cause Clustering",
+    "workspace": "tickets, SLA policy, status page, knowledge base",
+    "tools": [
+      "support",
+      "status",
+      "kb"
+    ],
+    "mode": "cross-workspace",
+    "difficulty": "frontier",
+    "observable_goal": "Resolve the root-cause clustering case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "customer-support-handoff-recovery",
+    "domain": "customer-support",
+    "title": "Handoff Recovery",
+    "workspace": "tickets, SLA policy, status page, knowledge base",
+    "tools": [
+      "support",
+      "status",
+      "kb"
+    ],
+    "mode": "multi-round",
+    "difficulty": "medium",
+    "observable_goal": "Resolve the handoff recovery case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "security-operations-phishing-containment",
+    "domain": "security-operations",
+    "title": "Phishing Containment",
+    "workspace": "SIEM alerts, identity, endpoint, runbooks",
+    "tools": [
+      "siem",
+      "iam",
+      "edr"
+    ],
+    "mode": "multi-round",
+    "difficulty": "hard",
+    "observable_goal": "Resolve the phishing containment case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "security-operations-access-key-rotation",
+    "domain": "security-operations",
+    "title": "Access-Key Rotation",
+    "workspace": "SIEM alerts, identity, endpoint, runbooks",
+    "tools": [
+      "siem",
+      "iam",
+      "edr"
+    ],
+    "mode": "single-workspace",
+    "difficulty": "frontier",
+    "observable_goal": "Resolve the access-key rotation case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "security-operations-alert-correlation",
+    "domain": "security-operations",
+    "title": "Alert Correlation",
+    "workspace": "SIEM alerts, identity, endpoint, runbooks",
+    "tools": [
+      "siem",
+      "iam",
+      "edr"
+    ],
+    "mode": "cross-workspace",
+    "difficulty": "medium",
+    "observable_goal": "Resolve the alert correlation case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "security-operations-privilege-review",
+    "domain": "security-operations",
+    "title": "Privilege Review",
+    "workspace": "SIEM alerts, identity, endpoint, runbooks",
+    "tools": [
+      "siem",
+      "iam",
+      "edr"
+    ],
+    "mode": "multi-round",
+    "difficulty": "hard",
+    "observable_goal": "Resolve the privilege review case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "security-operations-incident-timeline",
+    "domain": "security-operations",
+    "title": "Incident Timeline",
+    "workspace": "SIEM alerts, identity, endpoint, runbooks",
+    "tools": [
+      "siem",
+      "iam",
+      "edr"
+    ],
+    "mode": "single-workspace",
+    "difficulty": "frontier",
+    "observable_goal": "Resolve the incident timeline case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "cloud-operations-rollback-decision",
+    "domain": "cloud-operations",
+    "title": "Rollback Decision",
+    "workspace": "metrics, deploys, infrastructure state, tickets",
+    "tools": [
+      "cloud",
+      "observability",
+      "git"
+    ],
+    "mode": "single-workspace",
+    "difficulty": "medium",
+    "observable_goal": "Resolve the rollback decision case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "cloud-operations-capacity-incident",
+    "domain": "cloud-operations",
+    "title": "Capacity Incident",
+    "workspace": "metrics, deploys, infrastructure state, tickets",
+    "tools": [
+      "cloud",
+      "observability",
+      "git"
+    ],
+    "mode": "cross-workspace",
+    "difficulty": "hard",
+    "observable_goal": "Resolve the capacity incident case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "cloud-operations-certificate-renewal",
+    "domain": "cloud-operations",
+    "title": "Certificate Renewal",
+    "workspace": "metrics, deploys, infrastructure state, tickets",
+    "tools": [
+      "cloud",
+      "observability",
+      "git"
+    ],
+    "mode": "multi-round",
+    "difficulty": "frontier",
+    "observable_goal": "Resolve the certificate renewal case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "cloud-operations-cost-anomaly",
+    "domain": "cloud-operations",
+    "title": "Cost Anomaly",
+    "workspace": "metrics, deploys, infrastructure state, tickets",
+    "tools": [
+      "cloud",
+      "observability",
+      "git"
+    ],
+    "mode": "single-workspace",
+    "difficulty": "medium",
+    "observable_goal": "Resolve the cost anomaly case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "cloud-operations-region-failover",
+    "domain": "cloud-operations",
+    "title": "Region Failover",
+    "workspace": "metrics, deploys, infrastructure state, tickets",
+    "tools": [
+      "cloud",
+      "observability",
+      "git"
+    ],
+    "mode": "cross-workspace",
+    "difficulty": "hard",
+    "observable_goal": "Resolve the region failover case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "finance-three-way-match",
+    "domain": "finance",
+    "title": "Three-Way Match",
+    "workspace": "ledger, invoices, purchase orders, bank feed",
+    "tools": [
+      "ledger",
+      "ap",
+      "bank"
+    ],
+    "mode": "cross-workspace",
+    "difficulty": "frontier",
+    "observable_goal": "Resolve the three-way match case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "finance-close-reconciliation",
+    "domain": "finance",
+    "title": "Close Reconciliation",
+    "workspace": "ledger, invoices, purchase orders, bank feed",
+    "tools": [
+      "ledger",
+      "ap",
+      "bank"
+    ],
+    "mode": "multi-round",
+    "difficulty": "medium",
+    "observable_goal": "Resolve the close reconciliation case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "finance-cash-forecast",
+    "domain": "finance",
+    "title": "Cash Forecast",
+    "workspace": "ledger, invoices, purchase orders, bank feed",
+    "tools": [
+      "ledger",
+      "ap",
+      "bank"
+    ],
+    "mode": "single-workspace",
+    "difficulty": "hard",
+    "observable_goal": "Resolve the cash forecast case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "finance-expense-exception",
+    "domain": "finance",
+    "title": "Expense Exception",
+    "workspace": "ledger, invoices, purchase orders, bank feed",
+    "tools": [
+      "ledger",
+      "ap",
+      "bank"
+    ],
+    "mode": "cross-workspace",
+    "difficulty": "frontier",
+    "observable_goal": "Resolve the expense exception case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "finance-revenue-recognition",
+    "domain": "finance",
+    "title": "Revenue Recognition",
+    "workspace": "ledger, invoices, purchase orders, bank feed",
+    "tools": [
+      "ledger",
+      "ap",
+      "bank"
+    ],
+    "mode": "multi-round",
+    "difficulty": "medium",
+    "observable_goal": "Resolve the revenue recognition case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "procurement-vendor-onboarding",
+    "domain": "procurement",
+    "title": "Vendor Onboarding",
+    "workspace": "vendors, contracts, risk reviews, purchase requests",
+    "tools": [
+      "vendor",
+      "contract",
+      "risk"
+    ],
+    "mode": "multi-round",
+    "difficulty": "hard",
+    "observable_goal": "Resolve the vendor onboarding case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "procurement-renewal-negotiation",
+    "domain": "procurement",
+    "title": "Renewal Negotiation",
+    "workspace": "vendors, contracts, risk reviews, purchase requests",
+    "tools": [
+      "vendor",
+      "contract",
+      "risk"
+    ],
+    "mode": "single-workspace",
+    "difficulty": "frontier",
+    "observable_goal": "Resolve the renewal negotiation case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "procurement-sanctions-screening",
+    "domain": "procurement",
+    "title": "Sanctions Screening",
+    "workspace": "vendors, contracts, risk reviews, purchase requests",
+    "tools": [
+      "vendor",
+      "contract",
+      "risk"
+    ],
+    "mode": "cross-workspace",
+    "difficulty": "medium",
+    "observable_goal": "Resolve the sanctions screening case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "procurement-SLA-comparison",
+    "domain": "procurement",
+    "title": "Sla Comparison",
+    "workspace": "vendors, contracts, risk reviews, purchase requests",
+    "tools": [
+      "vendor",
+      "contract",
+      "risk"
+    ],
+    "mode": "multi-round",
+    "difficulty": "hard",
+    "observable_goal": "Resolve the SLA comparison case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "procurement-purchase-approval",
+    "domain": "procurement",
+    "title": "Purchase Approval",
+    "workspace": "vendors, contracts, risk reviews, purchase requests",
+    "tools": [
+      "vendor",
+      "contract",
+      "risk"
+    ],
+    "mode": "single-workspace",
+    "difficulty": "frontier",
+    "observable_goal": "Resolve the purchase approval case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "hr-operations-onboarding-repair",
+    "domain": "hr-operations",
+    "title": "Onboarding Repair",
+    "workspace": "HRIS, recruiting, payroll, policy documents",
+    "tools": [
+      "hris",
+      "ats",
+      "payroll"
+    ],
+    "mode": "single-workspace",
+    "difficulty": "medium",
+    "observable_goal": "Resolve the onboarding repair case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "hr-operations-leave-reconciliation",
+    "domain": "hr-operations",
+    "title": "Leave Reconciliation",
+    "workspace": "HRIS, recruiting, payroll, policy documents",
+    "tools": [
+      "hris",
+      "ats",
+      "payroll"
+    ],
+    "mode": "cross-workspace",
+    "difficulty": "hard",
+    "observable_goal": "Resolve the leave reconciliation case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "hr-operations-payroll-correction",
+    "domain": "hr-operations",
+    "title": "Payroll Correction",
+    "workspace": "HRIS, recruiting, payroll, policy documents",
+    "tools": [
+      "hris",
+      "ats",
+      "payroll"
+    ],
+    "mode": "multi-round",
+    "difficulty": "frontier",
+    "observable_goal": "Resolve the payroll correction case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "hr-operations-candidate-scheduling",
+    "domain": "hr-operations",
+    "title": "Candidate Scheduling",
+    "workspace": "HRIS, recruiting, payroll, policy documents",
+    "tools": [
+      "hris",
+      "ats",
+      "payroll"
+    ],
+    "mode": "single-workspace",
+    "difficulty": "medium",
+    "observable_goal": "Resolve the candidate scheduling case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "hr-operations-policy-exception",
+    "domain": "hr-operations",
+    "title": "Policy Exception",
+    "workspace": "HRIS, recruiting, payroll, policy documents",
+    "tools": [
+      "hris",
+      "ats",
+      "payroll"
+    ],
+    "mode": "cross-workspace",
+    "difficulty": "hard",
+    "observable_goal": "Resolve the policy exception case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "healthcare-admin-prior-authorization",
+    "domain": "healthcare-admin",
+    "title": "Prior Authorization",
+    "workspace": "scheduling, eligibility, claims, referrals",
+    "tools": [
+      "ehr",
+      "claims",
+      "payer"
+    ],
+    "mode": "cross-workspace",
+    "difficulty": "frontier",
+    "observable_goal": "Resolve the prior authorization case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "healthcare-admin-claim-denial-appeal",
+    "domain": "healthcare-admin",
+    "title": "Claim Denial Appeal",
+    "workspace": "scheduling, eligibility, claims, referrals",
+    "tools": [
+      "ehr",
+      "claims",
+      "payer"
+    ],
+    "mode": "multi-round",
+    "difficulty": "medium",
+    "observable_goal": "Resolve the claim denial appeal case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "healthcare-admin-referral-routing",
+    "domain": "healthcare-admin",
+    "title": "Referral Routing",
+    "workspace": "scheduling, eligibility, claims, referrals",
+    "tools": [
+      "ehr",
+      "claims",
+      "payer"
+    ],
+    "mode": "single-workspace",
+    "difficulty": "hard",
+    "observable_goal": "Resolve the referral routing case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "healthcare-admin-schedule-recovery",
+    "domain": "healthcare-admin",
+    "title": "Schedule Recovery",
+    "workspace": "scheduling, eligibility, claims, referrals",
+    "tools": [
+      "ehr",
+      "claims",
+      "payer"
+    ],
+    "mode": "cross-workspace",
+    "difficulty": "frontier",
+    "observable_goal": "Resolve the schedule recovery case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "healthcare-admin-eligibility-conflict",
+    "domain": "healthcare-admin",
+    "title": "Eligibility Conflict",
+    "workspace": "scheduling, eligibility, claims, referrals",
+    "tools": [
+      "ehr",
+      "claims",
+      "payer"
+    ],
+    "mode": "multi-round",
+    "difficulty": "medium",
+    "observable_goal": "Resolve the eligibility conflict case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "supply-chain-stockout-recovery",
+    "domain": "supply-chain",
+    "title": "Stockout Recovery",
+    "workspace": "orders, inventory, carriers, warehouse events",
+    "tools": [
+      "erp",
+      "wms",
+      "carrier"
+    ],
+    "mode": "multi-round",
+    "difficulty": "hard",
+    "observable_goal": "Resolve the stockout recovery case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "supply-chain-shipment-reroute",
+    "domain": "supply-chain",
+    "title": "Shipment Reroute",
+    "workspace": "orders, inventory, carriers, warehouse events",
+    "tools": [
+      "erp",
+      "wms",
+      "carrier"
+    ],
+    "mode": "single-workspace",
+    "difficulty": "frontier",
+    "observable_goal": "Resolve the shipment reroute case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "supply-chain-supplier-delay",
+    "domain": "supply-chain",
+    "title": "Supplier Delay",
+    "workspace": "orders, inventory, carriers, warehouse events",
+    "tools": [
+      "erp",
+      "wms",
+      "carrier"
+    ],
+    "mode": "cross-workspace",
+    "difficulty": "medium",
+    "observable_goal": "Resolve the supplier delay case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "supply-chain-return-disposition",
+    "domain": "supply-chain",
+    "title": "Return Disposition",
+    "workspace": "orders, inventory, carriers, warehouse events",
+    "tools": [
+      "erp",
+      "wms",
+      "carrier"
+    ],
+    "mode": "multi-round",
+    "difficulty": "hard",
+    "observable_goal": "Resolve the return disposition case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "supply-chain-demand-exception",
+    "domain": "supply-chain",
+    "title": "Demand Exception",
+    "workspace": "orders, inventory, carriers, warehouse events",
+    "tools": [
+      "erp",
+      "wms",
+      "carrier"
+    ],
+    "mode": "single-workspace",
+    "difficulty": "frontier",
+    "observable_goal": "Resolve the demand exception case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "legal-operations-clause-deviation",
+    "domain": "legal-operations",
+    "title": "Clause Deviation",
+    "workspace": "matters, contracts, holds, policy library",
+    "tools": [
+      "clm",
+      "matters",
+      "ediscovery"
+    ],
+    "mode": "single-workspace",
+    "difficulty": "medium",
+    "observable_goal": "Resolve the clause deviation case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "legal-operations-legal-hold",
+    "domain": "legal-operations",
+    "title": "Legal Hold",
+    "workspace": "matters, contracts, holds, policy library",
+    "tools": [
+      "clm",
+      "matters",
+      "ediscovery"
+    ],
+    "mode": "cross-workspace",
+    "difficulty": "hard",
+    "observable_goal": "Resolve the legal hold case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "legal-operations-obligation-tracking",
+    "domain": "legal-operations",
+    "title": "Obligation Tracking",
+    "workspace": "matters, contracts, holds, policy library",
+    "tools": [
+      "clm",
+      "matters",
+      "ediscovery"
+    ],
+    "mode": "multi-round",
+    "difficulty": "frontier",
+    "observable_goal": "Resolve the obligation tracking case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "legal-operations-intake-routing",
+    "domain": "legal-operations",
+    "title": "Intake Routing",
+    "workspace": "matters, contracts, holds, policy library",
+    "tools": [
+      "clm",
+      "matters",
+      "ediscovery"
+    ],
+    "mode": "single-workspace",
+    "difficulty": "medium",
+    "observable_goal": "Resolve the intake routing case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "legal-operations-renewal-notice",
+    "domain": "legal-operations",
+    "title": "Renewal Notice",
+    "workspace": "matters, contracts, holds, policy library",
+    "tools": [
+      "clm",
+      "matters",
+      "ediscovery"
+    ],
+    "mode": "cross-workspace",
+    "difficulty": "hard",
+    "observable_goal": "Resolve the renewal notice case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "data-operations-schema-incident",
+    "domain": "data-operations",
+    "title": "Schema Incident",
+    "workspace": "catalog, warehouse, lineage, quality monitors",
+    "tools": [
+      "catalog",
+      "sql",
+      "lineage"
+    ],
+    "mode": "cross-workspace",
+    "difficulty": "frontier",
+    "observable_goal": "Resolve the schema incident case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "data-operations-metric-reconciliation",
+    "domain": "data-operations",
+    "title": "Metric Reconciliation",
+    "workspace": "catalog, warehouse, lineage, quality monitors",
+    "tools": [
+      "catalog",
+      "sql",
+      "lineage"
+    ],
+    "mode": "multi-round",
+    "difficulty": "medium",
+    "observable_goal": "Resolve the metric reconciliation case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "data-operations-PII-classification",
+    "domain": "data-operations",
+    "title": "Pii Classification",
+    "workspace": "catalog, warehouse, lineage, quality monitors",
+    "tools": [
+      "catalog",
+      "sql",
+      "lineage"
+    ],
+    "mode": "single-workspace",
+    "difficulty": "hard",
+    "observable_goal": "Resolve the PII classification case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "data-operations-backfill-planning",
+    "domain": "data-operations",
+    "title": "Backfill Planning",
+    "workspace": "catalog, warehouse, lineage, quality monitors",
+    "tools": [
+      "catalog",
+      "sql",
+      "lineage"
+    ],
+    "mode": "cross-workspace",
+    "difficulty": "frontier",
+    "observable_goal": "Resolve the backfill planning case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "data-operations-pipeline-recovery",
+    "domain": "data-operations",
+    "title": "Pipeline Recovery",
+    "workspace": "catalog, warehouse, lineage, quality monitors",
+    "tools": [
+      "catalog",
+      "sql",
+      "lineage"
+    ],
+    "mode": "multi-round",
+    "difficulty": "medium",
+    "observable_goal": "Resolve the pipeline recovery case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "research-operations-replication-audit",
+    "domain": "research-operations",
+    "title": "Replication Audit",
+    "workspace": "papers, experiment registry, datasets, compute queue",
+    "tools": [
+      "literature",
+      "experiments",
+      "compute"
+    ],
+    "mode": "multi-round",
+    "difficulty": "hard",
+    "observable_goal": "Resolve the replication audit case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "research-operations-dataset-provenance",
+    "domain": "research-operations",
+    "title": "Dataset Provenance",
+    "workspace": "papers, experiment registry, datasets, compute queue",
+    "tools": [
+      "literature",
+      "experiments",
+      "compute"
+    ],
+    "mode": "single-workspace",
+    "difficulty": "frontier",
+    "observable_goal": "Resolve the dataset provenance case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "research-operations-ablation-planning",
+    "domain": "research-operations",
+    "title": "Ablation Planning",
+    "workspace": "papers, experiment registry, datasets, compute queue",
+    "tools": [
+      "literature",
+      "experiments",
+      "compute"
+    ],
+    "mode": "cross-workspace",
+    "difficulty": "medium",
+    "observable_goal": "Resolve the ablation planning case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "research-operations-compute-allocation",
+    "domain": "research-operations",
+    "title": "Compute Allocation",
+    "workspace": "papers, experiment registry, datasets, compute queue",
+    "tools": [
+      "literature",
+      "experiments",
+      "compute"
+    ],
+    "mode": "multi-round",
+    "difficulty": "hard",
+    "observable_goal": "Resolve the compute allocation case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  },
+  {
+    "id": "research-operations-result-reconciliation",
+    "domain": "research-operations",
+    "title": "Result Reconciliation",
+    "workspace": "papers, experiment registry, datasets, compute queue",
+    "tools": [
+      "literature",
+      "experiments",
+      "compute"
+    ],
+    "mode": "single-workspace",
+    "difficulty": "frontier",
+    "observable_goal": "Resolve the result reconciliation case and leave auditable state changes.",
+    "verifier": "Final-state assertions, policy invariants, evidence-access checks, and action-budget limits.",
+    "expansion": "Generate entity, policy, failure, interruption, and requirement-revision variants."
+  }
+]
